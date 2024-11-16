@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { OperationsController } from './operations.controller';
-import { ImageService } from './image.service';
-import { VideoService } from './video.service';
-import { TextService } from './text.service';
+import { OperationsService } from './operations.service';
+import { FileUploadModule } from 'src/file-upload/file-upload.module';
 
 @Module({
   controllers: [OperationsController],
-  providers: [ImageService, VideoService, TextService]
+  providers: [OperationsService],
+  imports: [FileUploadModule],
 })
 export class OperationsModule {}

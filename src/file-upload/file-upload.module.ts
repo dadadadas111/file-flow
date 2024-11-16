@@ -10,6 +10,7 @@ import { FileDeletionProcessor } from 'src/file-upload/file-deletion.processor';
     name: 'file-deletion',
   })],
   controllers: [FileUploadController],
-  providers: [FileUploadService, FileCleanupService, FileDeletionProcessor]
+  providers: [FileUploadService, FileCleanupService, FileDeletionProcessor],
+  exports: [FileUploadService, FileCleanupService],
 })
 export class FileUploadModule { }

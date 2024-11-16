@@ -2,7 +2,6 @@ import { Controller, Post, UploadedFile, UseInterceptors } from '@nestjs/common'
 import * as fs from 'fs';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { FileCleanupService } from 'src/file-upload/file-cleanup.service';
-import { randomBytes } from 'crypto';
 
 @Controller('file-upload')
 export class FileUploadController {
